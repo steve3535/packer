@@ -8,7 +8,7 @@ source "qemu" "rhel8" {
   accelerator       = "kvm"
   http_directory    = "."
   ssh_username      = "root"
-  ssh_password      = "L@lux0123456789#"
+  ssh_password      = "123456789"
   ssh_timeout       = "30m"
   vm_name           = "RHEL8STD"
   net_device        = "virtio-net"

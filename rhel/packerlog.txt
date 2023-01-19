@@ -1,0 +1,684 @@
+2023/01/19 13:22:04 [INFO] Packer version: 1.8.3 [go1.17.11 linux amd64]
+2023/01/19 13:22:04 [TRACE] discovering plugins in /usr/bin
+2023/01/19 13:22:04 [TRACE] discovering plugins in /home/lalux.local/mk417/.config/packer/plugins
+2023/01/19 13:22:04 [DEBUG] Discovered plugin: vsphere = /home/lalux.local/mk417/.config/packer/plugins/github.com/hashicorp/vsphere/packer-plugin-vsphere_v1.1.0_x5.0_linux_amd64
+2023/01/19 13:22:04 [INFO] found external [clone iso supervisor] builders from vsphere plugin
+2023/01/19 13:22:04 [INFO] found external [-packer-default-plugin-name- template] post-processors from vsphere plugin
+2023/01/19 13:22:04 [TRACE] discovering plugins in .
+2023/01/19 13:22:04 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2023/01/19 13:22:04 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/lalux.local/mk417/.packerconfig
+2023/01/19 13:22:04 [WARN] Config file doesn't exist: /home/lalux.local/mk417/.packerconfig
+2023/01/19 13:22:04 [INFO] Setting cache directory: /home/lalux.local/mk417/.cache/packer
+2023/01/19 13:22:04 [TRACE] Starting internal plugin packer-builder-qemu
+2023/01/19 13:22:04 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-builder-qemu"}
+2023/01/19 13:22:04 Waiting for RPC address for: /usr/bin/packer
+2023/01/19 13:22:04 packer-builder-qemu plugin: [INFO] Packer version: 1.8.3 [go1.17.11 linux amd64]
+2023/01/19 13:22:04 packer-builder-qemu plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2023/01/19 13:22:04 packer-builder-qemu plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/lalux.local/mk417/.packerconfig
+2023/01/19 13:22:04 packer-builder-qemu plugin: [WARN] Config file doesn't exist: /home/lalux.local/mk417/.packerconfig
+2023/01/19 13:22:04 packer-builder-qemu plugin: [INFO] Setting cache directory: /home/lalux.local/mk417/.cache/packer
+2023/01/19 13:22:04 packer-builder-qemu plugin: args: []string{"packer-builder-qemu"}
+2023/01/19 13:22:04 packer-builder-qemu plugin: Plugin address: unix /tmp/packer-plugin2327475556
+2023/01/19 13:22:04 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2327475556
+2023/01/19 13:22:04 packer-builder-qemu plugin: Waiting for connection...
+2023/01/19 13:22:04 packer-builder-qemu plugin: Serving a plugin connection...
+2023/01/19 13:22:04 packer-builder-qemu plugin: use specified accelerator: kvm
+2023/01/19 13:22:04 packer-builder-qemu plugin: MemorySize 0 is too small, using default: 512
+2023/01/19 13:22:04 packer-builder-qemu plugin: CpuCount 0 too small, using default: 1
+2023/01/19 13:22:04 ui: [1;32mqemu.rhel8: output will be in this color.[0m
+2023/01/19 13:22:04 ui: 
+2023/01/19 13:22:04 Build debug mode: false
+2023/01/19 13:22:04 Force build: false
+2023/01/19 13:22:04 On error: 
+2023/01/19 13:22:04 Waiting on builds to complete...
+2023/01/19 13:22:04 Starting build run: qemu.rhel8
+2023/01/19 13:22:04 Running builder: 
+2023/01/19 13:22:04 [INFO] (telemetry) Starting builder qemu.rhel8
+2023/01/19 13:22:04 packer-builder-qemu plugin: Qemu path: /usr/bin/qemu-system-x86_64, Qemu Image path: /usr/bin/qemu-img
+2023/01/19 13:22:04 ui: [1;32m==> qemu.rhel8: Retrieving ISO[0m
+2023/01/19 13:22:04 ui: [1;32m==> qemu.rhel8: Trying ./rhel-8.6-x86_64-dvd.iso[0m
+2023/01/19 13:22:04 packer-builder-qemu plugin: Acquiring lock for: ./rhel-8.6-x86_64-dvd.iso?checksum=md5%3Aa5358b999ab1da0a7d4ea15d21367a2a (/home/lalux.local/mk417/.cache/packer/b80f61169cc6e9459de4342b345927ea8033d3a4.iso.lock)
+2023/01/19 13:22:04 ui: [1;32m==> qemu.rhel8: Trying ./rhel-8.6-x86_64-dvd.iso?checksum=md5%3Aa5358b999ab1da0a7d4ea15d21367a2a[0m
+2023/01/19 13:22:07 [ERR] Checkpoint error: Get "https://checkpoint-api.hashicorp.com/v1/check/packer?arch=amd64&os=linux&signature=c816971e-7b30-79e1-a005-59d9d5343795&version=1.8.3": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2023/01/19 13:22:07 packer-builder-qemu plugin: [ERR] Checkpoint error: Get "https://checkpoint-api.hashicorp.com/v1/check/packer?arch=amd64&os=linux&signature=c816971e-7b30-79e1-a005-59d9d5343795&version=1.8.3": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2023/01/19 13:23:03 ui: [1;32m==> qemu.rhel8: ./rhel-8.6-x86_64-dvd.iso?checksum=md5%3Aa5358b999ab1da0a7d4ea15d21367a2a => /opt/packer/rhel/rhel-8.6-x86_64-dvd.iso[0m
+2023/01/19 13:23:03 packer-builder-qemu plugin: Leaving retrieve loop for ISO
+2023/01/19 13:23:03 packer-builder-qemu plugin: No floppy files specified. Floppy disk will not be made.
+2023/01/19 13:23:03 packer-builder-qemu plugin: No CD files specified. CD disk will not be made.
+2023/01/19 13:23:03 packer-builder-qemu plugin: [INFO] Creating disk with Path: nutanix/RHEL8STD and Size: 51200M
+2023/01/19 13:23:03 packer-builder-qemu plugin: Executing qemu-img: []string{"create", "-f", "qcow2", "nutanix/RHEL8STD", "51200M"}
+2023/01/19 13:23:03 ui: [1;32m==> qemu.rhel8: Starting HTTP server on port 8106[0m
+2023/01/19 13:23:03 packer-builder-qemu plugin: stdout: Formatting 'nutanix/RHEL8STD', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=53687091200 lazy_refcounts=off refcount_bits=16
+2023/01/19 13:23:03 packer-builder-qemu plugin: stderr:
+2023/01/19 13:23:03 packer-builder-qemu plugin: Found available port: 8106 on IP: 0.0.0.0
+2023/01/19 13:23:03 ui: [1;32m==> qemu.rhel8: Found port for communicator (SSH, WinRM, etc): 2793.[0m
+2023/01/19 13:23:03 packer-builder-qemu plugin: Looking for available communicator (SSH, WinRM, etc) port between 2222 and 4444
+2023/01/19 13:23:03 packer-builder-qemu plugin: Found available port: 2793 on IP: 127.0.0.1
+2023/01/19 13:23:03 ui: [1;32m==> qemu.rhel8: Looking for available port between 5900 and 6000 on 127.0.0.1[0m
+2023/01/19 13:23:03 packer-builder-qemu plugin: Looking for available port between 5900 and 6000 on 127.0.0.1
+2023/01/19 13:23:03 packer-builder-qemu plugin: Found available port: 5902 on IP: 127.0.0.1
+2023/01/19 13:23:03 packer-builder-qemu plugin: Found available VNC port: 5902 on IP: 127.0.0.1
+2023/01/19 13:23:04 packer-builder-qemu plugin: Qemu --version output: QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.6)
+2023/01/19 13:23:04 packer-builder-qemu plugin: Copyright (c) 2003-2021 Fabrice Bellard and the QEMU Project developers
+2023/01/19 13:23:04 packer-builder-qemu plugin: Qemu version: 6.2.0
+2023/01/19 13:23:04 ui: [1;32m==> qemu.rhel8: Starting VM, booting from CD-ROM[0m
+2023/01/19 13:23:04 ui: [1;32m==> qemu.rhel8: Overriding default Qemu arguments with qemuargs template option...[0m
+2023/01/19 13:23:04 packer-builder-qemu plugin: Qemu Builder has no floppy files, not attaching a floppy.
+2023/01/19 13:23:04 packer-builder-qemu plugin: Executing /usr/bin/qemu-system-x86_64: []string{"-display", "gtk", "-drive", "file=nutanix/RHEL8STD,if=virtio,cache=writeback,discard=ignore,format=qcow2", "-drive", "file=/opt/packer/rhel/rhel-8.6-x86_64-dvd.iso,media=cdrom", "-name", "RHEL8STD", "-bios", "/usr/share/ovmf/OVMF.fd", "-device", "virtio-net,netdev=user.0", "-netdev", "user,id=user.0,hostfwd=tcp::2793-:22", "-machine", "q35,accel=kvm", "-vnc", "127.0.0.1:2", "-boot", "once=d", "-m", "1024M"}
+2023/01/19 13:23:04 packer-builder-qemu plugin: Started Qemu. Pid: 510511
+2023/01/19 13:23:05 packer-builder-qemu plugin: Qemu stderr: qemu-system-x86_64: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
+2023/01/19 13:23:06 ui: [1;32m==> qemu.rhel8: Waiting 10s for boot...[0m
+2023/01/19 13:23:16 ui: [1;32m==> qemu.rhel8: Connecting to VM via VNC (127.0.0.1:5902)[0m
+2023/01/19 13:23:16 ui: [1;32m==> qemu.rhel8: Typing the boot command over VNC...[0m
+2023/01/19 13:23:16 packer-builder-qemu plugin: Connected to VNC desktop: QEMU (RHEL8STD)
+2023/01/19 13:23:16 packer-builder-qemu plugin: [INFO] Waiting 1s
+2023/01/19 13:23:17 packer-builder-qemu plugin: [INFO] Waiting 1s
+2023/01/19 13:23:18 packer-builder-qemu plugin: Sending char 'e', code 0x65, shift false
+2023/01/19 13:23:18 packer-builder-qemu plugin: Special code '<down>' found, replacing with: 0xFF54
+2023/01/19 13:23:18 packer-builder-qemu plugin: Special code '<down>' found, replacing with: 0xFF54
+2023/01/19 13:23:19 packer-builder-qemu plugin: Special code '<end>' found, replacing with: 0xFF57
+2023/01/19 13:23:19 packer-builder-qemu plugin: Special code '<bs>' found, replacing with: 0xFF08
+2023/01/19 13:23:19 packer-builder-qemu plugin: Special code '<bs>' found, replacing with: 0xFF08
+2023/01/19 13:23:19 packer-builder-qemu plugin: Special code '<bs>' found, replacing with: 0xFF08
+2023/01/19 13:23:19 packer-builder-qemu plugin: Special code '<bs>' found, replacing with: 0xFF08
+2023/01/19 13:23:20 packer-builder-qemu plugin: Special code '<bs>' found, replacing with: 0xFF08
+2023/01/19 13:23:20 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2023/01/19 13:23:20 packer-builder-qemu plugin: Sending char 'n', code 0x6E, shift false
+2023/01/19 13:23:20 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:20 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:21 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:21 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:21 packer-builder-qemu plugin: Sending char 'e', code 0x65, shift false
+2023/01/19 13:23:21 packer-builder-qemu plugin: Sending char 'x', code 0x78, shift false
+2023/01/19 13:23:21 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:22 packer-builder-qemu plugin: Sending char ' ', code 0x20, shift false
+2023/01/19 13:23:22 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2023/01/19 13:23:22 packer-builder-qemu plugin: Sending char 'n', code 0x6E, shift false
+2023/01/19 13:23:22 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:22 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:23 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:23 packer-builder-qemu plugin: Sending char 'k', code 0x6B, shift false
+2023/01/19 13:23:23 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:23 packer-builder-qemu plugin: Sending char '=', code 0x3D, shift false
+2023/01/19 13:23:23 packer-builder-qemu plugin: Sending char 'h', code 0x68, shift false
+2023/01/19 13:23:24 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:24 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:24 packer-builder-qemu plugin: Sending char 'p', code 0x70, shift false
+2023/01/19 13:23:24 packer-builder-qemu plugin: Sending char ':', code 0x3A, shift true
+2023/01/19 13:23:25 packer-builder-qemu plugin: Sending char '/', code 0x2F, shift false
+2023/01/19 13:23:25 packer-builder-qemu plugin: Sending char '/', code 0x2F, shift false
+2023/01/19 13:23:25 packer-builder-qemu plugin: Sending char '1', code 0x31, shift false
+2023/01/19 13:23:25 packer-builder-qemu plugin: Sending char '0', code 0x30, shift false
+2023/01/19 13:23:25 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:26 packer-builder-qemu plugin: Sending char '0', code 0x30, shift false
+2023/01/19 13:23:26 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:26 packer-builder-qemu plugin: Sending char '2', code 0x32, shift false
+2023/01/19 13:23:26 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:26 packer-builder-qemu plugin: Sending char '2', code 0x32, shift false
+2023/01/19 13:23:27 packer-builder-qemu plugin: Sending char ':', code 0x3A, shift true
+2023/01/19 13:23:27 packer-builder-qemu plugin: Sending char '8', code 0x38, shift false
+2023/01/19 13:23:27 packer-builder-qemu plugin: Sending char '1', code 0x31, shift false
+2023/01/19 13:23:28 packer-builder-qemu plugin: Sending char '0', code 0x30, shift false
+2023/01/19 13:23:28 packer-builder-qemu plugin: Sending char '6', code 0x36, shift false
+2023/01/19 13:23:28 packer-builder-qemu plugin: Sending char '/', code 0x2F, shift false
+2023/01/19 13:23:28 packer-builder-qemu plugin: Sending char 'k', code 0x6B, shift false
+2023/01/19 13:23:28 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2023/01/19 13:23:29 packer-builder-qemu plugin: Sending char 'c', code 0x63, shift false
+2023/01/19 13:23:29 packer-builder-qemu plugin: Sending char 'k', code 0x6B, shift false
+2023/01/19 13:23:29 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:29 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:29 packer-builder-qemu plugin: Sending char 'a', code 0x61, shift false
+2023/01/19 13:23:30 packer-builder-qemu plugin: Sending char 'r', code 0x72, shift false
+2023/01/19 13:23:30 packer-builder-qemu plugin: Sending char 't', code 0x74, shift false
+2023/01/19 13:23:30 packer-builder-qemu plugin: Sending char '_', code 0x5F, shift true
+2023/01/19 13:23:30 packer-builder-qemu plugin: Sending char 'f', code 0x66, shift false
+2023/01/19 13:23:31 packer-builder-qemu plugin: Sending char 'i', code 0x69, shift false
+2023/01/19 13:23:31 packer-builder-qemu plugin: Sending char 'l', code 0x6C, shift false
+2023/01/19 13:23:31 packer-builder-qemu plugin: Sending char 'e', code 0x65, shift false
+2023/01/19 13:23:31 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:31 packer-builder-qemu plugin: Sending char '/', code 0x2F, shift false
+2023/01/19 13:23:32 packer-builder-qemu plugin: Sending char 'q', code 0x71, shift false
+2023/01/19 13:23:32 packer-builder-qemu plugin: Sending char 'e', code 0x65, shift false
+2023/01/19 13:23:32 packer-builder-qemu plugin: Sending char 'm', code 0x6D, shift false
+2023/01/19 13:23:32 packer-builder-qemu plugin: Sending char 'u', code 0x75, shift false
+2023/01/19 13:23:32 packer-builder-qemu plugin: Sending char '-', code 0x2D, shift false
+2023/01/19 13:23:33 packer-builder-qemu plugin: Sending char 'k', code 0x6B, shift false
+2023/01/19 13:23:33 packer-builder-qemu plugin: Sending char 's', code 0x73, shift false
+2023/01/19 13:23:33 packer-builder-qemu plugin: Sending char '.', code 0x2E, shift false
+2023/01/19 13:23:33 packer-builder-qemu plugin: Sending char 'c', code 0x63, shift false
+2023/01/19 13:23:33 packer-builder-qemu plugin: Sending char 'f', code 0x66, shift false
+2023/01/19 13:23:34 packer-builder-qemu plugin: Sending char 'g', code 0x67, shift false
+2023/01/19 13:23:34 packer-builder-qemu plugin: Special code '<leftctrl>' found, replacing with: 0xFFE3
+2023/01/19 13:23:34 packer-builder-qemu plugin: Sending char 'x', code 0x78, shift false
+2023/01/19 13:23:34 packer-builder-qemu plugin: Special code '<leftctrl>' found, replacing with: 0xFFE3
+2023/01/19 13:23:34 ui: [0;32m    qemu.rhel8: Not using a NetBridge -- skipping StepWaitGuestAddress[0m
+2023/01/19 13:23:34 ui: [1;32m==> qemu.rhel8: Using SSH communicator to connect: 127.0.0.1[0m
+2023/01/19 13:23:34 ui: [1;32m==> qemu.rhel8: Waiting for SSH to become available...[0m
+2023/01/19 13:23:34 packer-builder-qemu plugin: [INFO] Waiting for SSH, up to timeout: 30m0s
+2023/01/19 13:23:34 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:23:34 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:23:34 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:16 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:42386->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:23 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:23 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:23 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:23 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57156->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:30 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:30 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:30 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:30 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57168->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:37 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:37 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:37 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:37 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57436->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:44 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:44 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:44 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:44 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:46028->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:51 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:51 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:51 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:51 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:46044->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:24:58 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:24:58 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:24:58 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:24:58 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:40968->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:05 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:05 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:05 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:05 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50180->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:12 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:12 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:12 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:12 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48596->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:19 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:19 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:19 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:19 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48626->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:26 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:26 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:26 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:26 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36462->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:33 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:33 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:33 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:33 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:60968->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:40 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:40 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:40 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:40 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:60978->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:47 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:47 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:47 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:47 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36508->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:25:54 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:25:54 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:25:54 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:25:54 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:56052->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:01 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:01 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:01 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:01 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:56074->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:08 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:08 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:08 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:08 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:39694->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:15 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:15 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:15 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:15 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57248->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:22 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:22 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:22 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:22 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:51570->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:29 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:29 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:29 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:29 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:51596->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:36 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:36 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:36 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:36 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:55778->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:43 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:43 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:43 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:43 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34612->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:50 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:50 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:50 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:50 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34630->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:26:57 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:26:57 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:26:57 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:26:57 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:35602->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:04 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:04 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:04 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:04 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50204->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:11 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:11 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:11 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:11 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50220->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:18 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:18 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:18 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:18 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:54112->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:25 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:25 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:25 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:25 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45672->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:32 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:32 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:32 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:32 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:58330->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:39 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:39 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:39 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:39 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:58342->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:46 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:46 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:46 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:46 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43188->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:27:53 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:27:53 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:27:53 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:27:53 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50080->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:00 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:00 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:00 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:00 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50108->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:07 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:07 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:07 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:07 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45462->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:14 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:14 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:14 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:14 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57124->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:21 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:21 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:21 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:21 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57146->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:28 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:28 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:28 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:28 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:44550->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:35 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:35 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:35 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:35 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:42208->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:42 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:42 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:42 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:42 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:52250->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:49 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:49 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:49 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:49 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:52258->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:28:56 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:28:56 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:28:56 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:28:56 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50636->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:03 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:03 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:03 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:03 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:52782->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:10 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:10 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:10 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:10 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:52804->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:17 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:17 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:17 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:17 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:51914->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:24 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:24 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:24 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:24 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47990->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:31 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:31 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:31 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:31 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48006->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:38 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:38 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:38 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:38 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47346->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:45 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:45 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:45 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:45 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57246->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:52 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:52 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:52 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:52 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:49242->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:29:59 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:29:59 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:29:59 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:29:59 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:49256->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:06 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:06 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:06 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:06 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45444->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:13 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:13 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:13 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:13 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34926->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:20 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:20 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:20 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:20 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34934->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:27 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:27 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:27 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:27 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:58232->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:34 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:34 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:34 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:34 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47380->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:41 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:41 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:41 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:41 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47398->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:48 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:48 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:48 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:48 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:55264->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:30:55 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:30:55 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:30:55 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:30:55 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48760->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:02 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:02 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:02 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:02 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47034->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:09 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:09 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:09 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:09 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47052->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:16 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:16 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:16 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:16 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:58708->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:23 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:23 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:23 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:23 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:56554->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:30 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:30 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:30 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:30 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:56574->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:37 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:37 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:37 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:37 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:56134->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:44 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:44 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:44 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:44 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43852->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:51 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:51 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:51 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:51 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43870->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:31:58 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:31:58 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:31:58 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:31:58 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:54002->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:05 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:05 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:05 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:05 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:35614->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:12 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:12 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:12 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:12 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:37130->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:19 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:19 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:19 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:19 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:37142->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:26 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:26 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:26 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:26 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45444->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:33 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:33 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:33 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:33 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:41058->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:40 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:40 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:40 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:40 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:41082->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:47 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:47 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:47 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:47 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:33842->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:32:54 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:32:54 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:32:54 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:32:54 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45452->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:01 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:01 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:01 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:01 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:45480->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:08 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:08 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:08 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:08 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:33886->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:15 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:15 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:15 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:15 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:39768->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:22 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:22 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:22 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:22 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57724->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:29 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:29 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:29 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:29 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57742->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:36 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:36 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:36 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:36 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:51256->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:43 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:43 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:43 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:43 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:59676->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:50 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:50 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:50 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:50 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:59684->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:33:57 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:33:57 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:33:57 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:33:57 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:55580->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:04 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:04 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:04 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:04 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34368->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:11 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:11 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:11 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:11 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34382->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:18 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:18 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:18 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:18 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:54246->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:25 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:25 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:25 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:25 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:42948->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:32 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:32 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:32 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:32 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36150->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:39 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:39 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:39 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:39 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36162->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:46 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:46 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:46 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:46 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:51800->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:34:53 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:34:53 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:34:53 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:34:53 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:54968->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:00 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:00 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:00 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:00 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:54986->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:07 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:07 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:07 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:07 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:35644->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:14 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:14 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:14 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:14 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57108->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:21 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:21 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:21 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:21 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57116->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:28 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:28 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:28 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:28 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48114->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:35 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:35 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:35 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:35 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:53050->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:42 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:42 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:42 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:42 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43220->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:49 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:49 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:49 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:49 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43250->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:35:56 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:35:56 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:35:56 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:35:56 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:53362->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:03 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:03 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:03 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:03 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48188->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:10 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:10 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:10 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:10 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:48202->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:17 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:17 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:17 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:17 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:50878->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:24 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:24 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:24 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:24 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36492->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:31 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:31 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:31 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:31 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:36508->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:38 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:38 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:38 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:38 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:47100->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:45 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:45 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:45 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:45 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:49174->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:52 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:52 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:52 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:52 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:38374->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:36:59 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:36:59 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:36:59 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:36:59 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:38404->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:06 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:06 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:06 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:06 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:58196->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:13 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:13 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:13 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:13 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:59186->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:20 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:20 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:20 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:20 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:59200->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:27 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:27 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:27 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:27 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:37040->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:34 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:34 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:34 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:34 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34898->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:41 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:41 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:41 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:41 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:34914->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:48 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:48 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:48 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:48 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:41026->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:37:55 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:37:55 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:37:55 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:37:55 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:57972->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:38:02 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:38:02 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:38:02 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:38:02 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43348->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:38:09 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:38:09 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:38:09 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:38:09 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:43358->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:38:16 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:38:16 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:38:16 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:38:16 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:37870->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:38:23 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:38:23 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:38:23 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:38:23 packer-builder-qemu plugin: [DEBUG] SSH handshake err: ssh: handshake failed: read tcp 127.0.0.1:40870->127.0.0.1:2793: read: connection reset by peer
+2023/01/19 13:38:30 packer-builder-qemu plugin: [INFO] Attempting SSH connection to 127.0.0.1:2793...
+2023/01/19 13:38:30 packer-builder-qemu plugin: [DEBUG] reconnecting to TCP connection for SSH
+2023/01/19 13:38:30 packer-builder-qemu plugin: [DEBUG] handshaking with SSH
+2023/01/19 13:39:01 packer-builder-qemu plugin: [DEBUG] handshake complete!
+2023/01/19 13:39:01 packer-builder-qemu plugin: [DEBUG] Opening new ssh session
+2023/01/19 13:39:01 packer-builder-qemu plugin: [INFO] agent forwarding enabled
+2023/01/19 13:39:01 ui: [1;32m==> qemu.rhel8: Connected to SSH![0m
+2023/01/19 13:39:01 packer-builder-qemu plugin: Running the provision hook
+2023/01/19 13:39:01 ui: [1;32m==> qemu.rhel8: Gracefully halting virtual machine...[0m
+2023/01/19 13:39:01 packer-builder-qemu plugin: Executing shutdown command: echo 'packer' | sudo -S shutdown -P now
+2023/01/19 13:39:01 packer-builder-qemu plugin: [DEBUG] Opening new ssh session
+2023/01/19 13:39:01 packer-builder-qemu plugin: [DEBUG] starting remote command: echo 'packer' | sudo -S shutdown -P now
+2023/01/19 13:39:02 packer-builder-qemu plugin: [ERROR] Remote command exited without exit status or exit signal.
+2023/01/19 13:39:02 packer-builder-qemu plugin: Waiting max 5m0s for shutdown to complete
+2023/01/19 13:39:09 ui: [1;32m==> qemu.rhel8: Converting hard drive...[0m
+2023/01/19 13:39:09 packer-builder-qemu plugin: VM shut down.
+2023/01/19 13:39:09 packer-builder-qemu plugin: Executing qemu-img: []string{"convert", "-O", "qcow2", "nutanix/RHEL8STD", "nutanix/RHEL8STD.convert"}
+2023/01/19 13:39:31 packer-builder-qemu plugin: stdout:
+2023/01/19 13:39:31 packer-builder-qemu plugin: stderr:
+2023/01/19 13:39:34 packer-builder-qemu plugin: failed to unlock port lockfile: close tcp 127.0.0.1:5902: use of closed network connection
+2023/01/19 13:39:34 packer-builder-qemu plugin: failed to unlock port lockfile: close tcp 127.0.0.1:2793: use of closed network connection
+2023/01/19 13:39:34 [INFO] (telemetry) ending qemu.rhel8
+2023/01/19 13:39:34 ui: [1;32mBuild 'qemu.rhel8' finished after 17 minutes 29 seconds.[0m
+2023/01/19 13:39:34 ui: 
+==> Wait completed after 17 minutes 29 seconds
+2023/01/19 13:39:34 ui: 
+==> Builds finished. The artifacts of successful builds are:
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact-count []string{"1"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "builder-id", "transcend.qemu"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "id", "VM"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "string", "VM files in directory: nutanix"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "files-count", "1"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "file", "0", "nutanix/RHEL8STD"}
+2023/01/19 13:39:34 machine readable: qemu.rhel8,artifact []string{"0", "end"}
+2023/01/19 13:39:34 ui: --> qemu.rhel8: VM files in directory: nutanix
+2023/01/19 13:39:34 [INFO] (telemetry) Finalizing.
+2023/01/19 13:39:36 [WARN] (telemetry) Error finalizing report. This is safe to ignore. Post "https://checkpoint-api.hashicorp.com/v1/telemetry/packer": context deadline exceeded
+2023/01/19 13:39:36 waiting for all plugin processes to complete...
+2023/01/19 13:39:36 /usr/bin/packer: plugin process exited

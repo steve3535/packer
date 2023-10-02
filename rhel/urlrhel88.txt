@@ -1,0 +1,1 @@
+https://access.cdn.redhat.com/content/origin/files/sha256/51/517abcc67ee3b7212f57e180f5d30be3e8269e7a99e127a3399b7935c7e00a09/rhel-8.8-x86_64-dvd.iso?user=35f1d459c0511d0bf780ddd67866da13&_auth_=1696249423_ac59846e0b8830e7cb020fc9378034a8

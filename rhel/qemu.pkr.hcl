@@ -1,7 +1,7 @@
 source "qemu" "rhel8" {
-  iso_url          = "./rhel-8.6-x86_64-dvd.iso"
-  iso_checksum     = "md5:a5358b999ab1da0a7d4ea15d21367a2a"
-  output_directory = "nutanix"
+  iso_url          = "./rhel-8.8-x86_64-dvd.iso"
+  iso_checksum     = "md5:b32c5b063f8ff3b4ef194108fcc6e77a"
+  output_directory = "nutanix-latest"
   shutdown_command = "echo 'packer' | sudo -S shutdown -P now"
   disk_size        = "51200M"
   format           = "qcow2"
@@ -10,7 +10,7 @@ source "qemu" "rhel8" {
   ssh_username     = "localadmin"
   ssh_password     = yamldecode(file("credentials.yml")).vm.ssh_password
   ssh_timeout      = "30m"
-  vm_name          = "RHEL8STD"
+  vm_name          = "RHEL8STD-latest"
   net_device       = "virtio-net"
   disk_interface   = "virtio"
   boot_wait        = "10s"

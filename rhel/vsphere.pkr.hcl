@@ -24,9 +24,9 @@ source "vsphere-iso" "rhel8" {
   insecure_connection  = true
   datastore            = "NUT_DMZ_ISO_DC1"
   iso_paths = [
-    "[NUT_DMZ_ISO_DC1] ISO/rhel-8.6-x86_64-dvd.iso"
+    "[NUT_DMZ_ISO_DC1] ISO/rhel-8.8-x86_64-dvd.iso"
   ]
-  iso_checksum = "md5:a5358b999ab1da0a7d4ea15d21367a2a"
+  iso_checksum = "md5:b32c5b063f8ff3b4ef194108fcc6e77a"
   cd_files     = ["${path.root}/kickstart_files/vsphere-ks.cfg"] #en lieu et place de floppy_files car floppy no more supported with rhel8 and above
 
   #sassurer que le VLAN choisi provide du dhcp sinon le script va attendre indefiniment pour lip
@@ -45,7 +45,7 @@ source "vsphere-iso" "rhel8" {
   password       = yamldecode(file("credentials.yml")).lu309.password
   vcenter_server = "lu309.lalux.local"
 
-  vm_name = "RHEL8STD"
+  vm_name = "RHEL8STD-latest"
 
   #eventuellement creer le content library dans vsphere et donner les droits dy lire et ecrire au user utilisé pour se connecter a vsphere
   content_library_destination {

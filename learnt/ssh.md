@@ -4,3 +4,4 @@
 * sometimes, it happened that i have to use qemuargs to explicitly set the port forwarding but according to packer docs, this shouldnt be required: packer handles it
 * something i noticed however is that sometimes the ssh connection prior toexecuting the provisionners, fails. It times out. the only solution seems to increase the timeout delay ...
   * to workaround the delay, we can use the accelerator = kvm for qemu provisionner, but be aware: this needs the user running the process to be part of the kvm group
+  * !!ATTN!! other times, the ssh delay is just a result of a wrong ssh password, check that as well ! the password might have changed !   

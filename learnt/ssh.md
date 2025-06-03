@@ -5,7 +5,7 @@
 * something i noticed however is that sometimes the ssh connection prior toexecuting the provisionners, fails. It times out. the only solution seems to increase the timeout delay ...
   * to workaround the delay, we can use the accelerator = kvm for qemu provisionner, but be aware: this needs the user running the process to be part of the kvm group
   * !!ATTN!! other times, the ssh delay is just a result of a wrong ssh password, check that as well ! the password might have changed !
-## In case of more than one interface  
+### In case of more than one interface  
 * Some weird bbehaviours can occur in case of 2 or more interfaces. from my exp., packer will struggle to determine on which interface ssh is listening or from which it should redirect from.  
   In such case, we need to add qemuargs to explicitly forward the port from a specific interface, for e.g. in case of opnsense, the WAN is exposed interface, in packer.hcl.pkr:  
   ```
